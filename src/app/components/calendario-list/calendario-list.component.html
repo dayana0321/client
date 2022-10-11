@@ -1,0 +1,23 @@
+<div class="" *ngFor="let calendario of calendarios">
+    <h5>Jornada: {{calendario.nombre_jornada}}</h5>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">País 1</th>
+            <th scope="col">Horario</th>
+            <th scope="col">País 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{calendario.id_calendario}}</td>
+            <td>{{calendario.pais1}}</td>
+            <td>{{calendario.hora_calendario}}</td>
+            <td>{{calendario.pais2}}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    
+</div>
