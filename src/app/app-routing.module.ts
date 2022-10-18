@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {PaisListComponent} from './components/pais-list/pais-list.component'
 import {EstadiosListComponent} from './components/estadios-list/estadios-list.component'
 import {CalendarioListComponent} from './components/calendario-list/calendario-list.component'
+import {TokenComponent} from './components/token/token.component'
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'calendario',
     component:CalendarioListComponent
+  },
+  {
+    path: 'token',
+    component:TokenComponent
   }
 ];
 

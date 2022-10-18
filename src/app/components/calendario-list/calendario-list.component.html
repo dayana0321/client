@@ -1,23 +1,204 @@
-<div class="" *ngFor="let calendario of calendarios">
-    <h5>Jornada: {{calendario.nombre_jornada}}</h5>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">No.</th>
-            <th scope="col">País 1</th>
-            <th scope="col">Horario</th>
-            <th scope="col">País 2</th>
+<div class="Jornada1">
+  <h5>Jornada 1</h5>
+  <div class="RegistrosJ1 table-responsive"  >
+     <table class="table table-bordered align-middle">
+      <thead class="table-dark">
+        <tr>
+           <th scope="col">No.</th>
+           <th scope="col">País 1</th>
+           <th scope="col">Horario</th>
+           <th scope="col">País 2</th>
+         </tr>
+         </thead>
+        <tbody *ngFor="let calendario of calendarios[0]">
+          <tr class="">
+            <th scope="row">{{calendario.id_calendario}}</th>
+            <td> {{calendario.pais1}} </td>
+            <td> {{calendario.hora_calendario}} </td>
+            <td> {{calendario.pais2}} </td>
           </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<br>
+<!--Jornada 2-->
+<div class="Jornada2">
+  <h5>Jornada 2</h5>
+  <div class="RegistrosJ2" >
+     <table class="table table-bordered">
+      <thead class="table-dark">
+       <tr>
+          <th scope="col">No.</th>
+          <th scope="col">País 1</th>
+          <th scope="col">Horario</th>
+          <th scope="col">País 2</th>
+        </tr>
         </thead>
-        <tbody>
+        <tbody *ngFor="let calendario of calendarios[1] ">
           <tr>
             <td>{{calendario.id_calendario}}</td>
             <td>{{calendario.pais1}}</td>
             <td>{{calendario.hora_calendario}}</td>
             <td>{{calendario.pais2}}</td>
           </tr>
-          
         </tbody>
       </table>
-    
+  </div>
+</div>
+
+
+<!--Jornada 3-->
+<div class="Jornada3">
+  <h5>Jornada 3</h5>
+  <div class="RegistrosJ3">
+     <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+           <th scope="col">No.</th>
+           <th scope="col">País 1</th>
+           <th scope="col">Horario</th>
+           <th scope="col">País 2</th>
+         </tr>
+         </thead>
+        <tbody *ngFor="let calendario of calendarios[2]">
+          <tr>
+            <td>{{calendario.id_calendario}}</td>
+            <td>{{calendario.pais1}}</td>
+            <td>{{calendario.hora_calendario}}</td>
+            <td>{{calendario.pais2}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<br>
+
+<!--Jornada 4-->
+<div class="Jornada4">
+  <h5>Octavos de Final</h5>
+  <div class="RegistrosJ4">
+     <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+           <th scope="col">No.</th>
+           <th scope="col">País 1</th>
+           <th scope="col">Horario</th>
+           <th scope="col">País 2</th>
+         </tr>
+         </thead>
+        <tbody *ngFor="let calendario of calendarios[3] ">
+          <tr>
+            <td>{{calendario.id_calendario}}</td>
+            <td>{{calendario.pais1}}</td>
+            <td>{{calendario.hora_calendario}}</td>
+            <td>{{calendario.pais2}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+
+<br>
+
+<!--Jornada 5-->
+<div class="Jornada5">
+  <h5>Cuartos de Final</h5>
+  <div class="RegistrosJ5">
+     <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+           <th scope="col">No.</th>
+           <th scope="col">País 1</th>
+           <th scope="col">Horario</th>
+           <th scope="col">País 2</th>
+         </tr>
+         </thead>
+        <tbody *ngFor="let calendario of calendarios[4] ">
+          <tr>
+            <td>{{calendario.id_calendario}}</td>
+            <td>{{calendario.pais1}}</td>
+            <td>{{calendario.hora_calendario}}</td>
+            <td>{{calendario.pais2}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+
+<!--Jornada 6-->
+<div class="Jornada6">
+  <h5>Semifinales</h5>
+  <div class="RegistrosJ6">
+     <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+           <th scope="col">No.</th>
+           <th scope="col">País 1</th>
+           <th scope="col">Horario</th>
+           <th scope="col">País 2</th>
+         </tr>
+         </thead>
+        <tbody *ngFor="let calendario of calendarios[5] ">
+          <tr>
+            <td>{{calendario.id_calendario}}</td>
+            <td>{{calendario.pais1}}</td>
+            <td>{{calendario.hora_calendario}}</td>
+            <td>{{calendario.pais2}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<br>
+<br>
+<!--Jornada 6-->
+<div class="Jornada7">
+  <h5>Tercer y Cuarto</h5>
+  <div class="RegistrosJ7">
+     <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+           <th scope="col">No.</th>
+           <th scope="col">País 1</th>
+           <th scope="col">Horario</th>
+           <th scope="col">País 2</th>
+         </tr>
+         </thead>
+        <tbody *ngFor="let calendario of calendarios[6]">
+          <tr>
+            <td>{{calendario.id_calendario}}</td>
+            <td>{{calendario.pais1}}</td>
+            <td>{{calendario.hora_calendario}}</td>
+            <td>{{calendario.pais2}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+<br>
+<br>
+<!--Jornada 6-->
+<div class="Jornada8">
+  <h5>Final</h5>
+  <div class="RegistrosJ7">
+     <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+           <th scope="col">No.</th>
+           <th scope="col">País 1</th>
+           <th scope="col">Horario</th>
+           <th scope="col">País 2</th>
+         </tr>
+         </thead>
+        <tbody *ngFor="let calendario of calendarios[7] ">
+          <tr>
+            <td>{{calendario.id_calendario}}</td>
+            <td>{{calendario.pais1}}</td>
+            <td>{{calendario.hora_calendario}}</td>
+            <td>{{calendario.pais2}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
 </div>

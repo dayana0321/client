@@ -5,5 +5,5 @@ export interface Paises{
     ranking_pais?: number;
     copas_pais?: number;
     bandera_pais?: string;
-    id_region?: number;
+    nombre_region?: string;
 }
