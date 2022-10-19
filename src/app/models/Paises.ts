@@ -6,4 +6,5 @@ export interface Paises{
     copas_pais?: number;
     bandera_pais?: string;
     nombre_region?: string;
+    nombre_grupo?:string;
 }

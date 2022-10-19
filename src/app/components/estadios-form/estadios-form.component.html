@@ -1,0 +1,43 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <!--Título de país-->
+                <div class="form-group mb-4">
+                    <input type="text" name="nombre_estadio" [(ngModel)]="estadios.nombre_estadio" placeholder="Nombre" class="form-control" autofocus>
+                </div>
+                <!--Imagen-->
+                <div class="form-group mb-4">
+                    <input type="url" name="foto_estadio" [(ngModel)]="estadios.foto_estadio" placeholder="Foto" class="form-control">
+                </div>
+
+                <!--Código del país-->
+                <div class="form-group mb-4">
+                    <input type="text" name="capacidad_estadio" [(ngModel)]="estadios.capacidad_estadio" placeholder="Capacidad" class="form-control">
+                </div>
+
+                   <!--Grupo del país-->
+                   <div class="form-group mb-4">
+                    <input type="text" name="ciudad_estadio" [(ngModel)]="estadios.ciudad_estadio" placeholder="Ciudad" class="form-control">
+                </div>
+
+                    <!--Region del país-->
+                    <div class="form-group mb-4">
+                        <textarea type="text" name="descripcion_estadio" [(ngModel)]="estadios.descripcion_estadio" placeholder="Descripcion" class="form-control"></textarea>
+                    </div>
+
+                    <button class="btn btn-success btn-block" (click)="saveNewEstadio()">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <h5>{{estadios.nombre_estadio == '' ? 'Nombre del Estadio' : estadios.nombre_estadio}}</h5>
+        <img [src]="estadios.foto_estadio == '' ? '/assets/noimage.png' : estadios.foto_estadio " class="card-img-top">
+        <p>{{estadios.capacidad_estadio == '' ? 'Capacidad del Estadio' : estadios.capacidad_estadio}}</p>
+        <p>{{estadios.ciudad_estadio == '' ? 'Ciudad del estadio' : estadios.ciudad_estadio}}</p>
+        <p>{{estadios.descripcion_estadio == '' ? 'Descripción del estadio' : estadios.descripcion_estadio}}</p>
+    </div>
+</div>

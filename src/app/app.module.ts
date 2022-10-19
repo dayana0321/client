@@ -16,6 +16,8 @@ import {EstadiosService} from './services/estadios.service';
 import {CalendariosService} from './services/calendarios.service';
 import { TokenComponent } from './components/token/token.component'
 import {TokenService} from './services/token.service';
+import { PaisFormComponent } from './components/pais-form/pais-form.component';
+import { EstadiosFormComponent } from './components/estadios-form/estadios-form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {TokenService} from './services/token.service';
     PaisListComponent,
     EstadiosListComponent,
     CalendarioListComponent,
-    TokenComponent
+    TokenComponent,
+    PaisFormComponent,
+    EstadiosFormComponent
   ],
   imports: [
     BrowserModule,

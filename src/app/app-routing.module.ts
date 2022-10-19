@@ -6,6 +6,8 @@ import {PaisListComponent} from './components/pais-list/pais-list.component'
 import {EstadiosListComponent} from './components/estadios-list/estadios-list.component'
 import {CalendarioListComponent} from './components/calendario-list/calendario-list.component'
 import {TokenComponent} from './components/token/token.component'
+import {PaisFormComponent} from './components/pais-form/pais-form.component'
+import {EstadiosFormComponent} from './components/estadios-form/estadios-form.component'
 
 const routes: Routes = [
   {
@@ -28,6 +30,14 @@ const routes: Routes = [
   {
     path: 'token',
     component:TokenComponent
+  },
+  {
+    path: 'paises/add',
+    component:PaisFormComponent
+  },
+  {
+    path: 'estadios/add',
+    component: EstadiosFormComponent
   }
 ];
 

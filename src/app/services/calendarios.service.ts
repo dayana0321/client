@@ -1,8 +1,17 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
+import {HttpHeaders} from '@angular/common/http'
 
 import {Calendarios} from '../models/Calendarios'
 import { Observable } from 'rxjs';
+
+const headers = new HttpHeaders({
+  'Content-Type': 'application/json',
+  'Authorization':
+  `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9zY2FyIiwiaWF0IjoxNjY1Nzk4NDA2LCJleHAiOjE2NjgzOTA0MDZ9.d-jd3vC8CGPwQv0JhYwL-EZUKnogYrI5WB7KHw2mEtw`
+
+});
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +21,7 @@ export class CalendariosService {
   constructor(private http: HttpClient) { }
 
   getCalendarios(){
-    return this.http.get(`${this.API_URI}/calendario`);
+    return this.http.get(`${this.API_URI}/calendario`,{headers: headers});
   }
 
   getCalendario(id:string){

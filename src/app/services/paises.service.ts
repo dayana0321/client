@@ -1,9 +1,20 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
+import {HttpHeaders} from '@angular/common/http'
 
 //Interfaces
 import {Paises} from '../models/Paises'
 import { Observable } from 'rxjs';
+
+const headers = new HttpHeaders({
+  'Content-Type': 'application/json',
+  'Authorization':
+  `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9zY2FyIiwiaWF0IjoxNjY1Nzk4NDA2LCJleHAiOjE2NjgzOTA0MDZ9.d-jd3vC8CGPwQv0JhYwL-EZUKnogYrI5WB7KHw2mEtw`
+
+});
+
+//const requestOptions = { headers: headers };
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,14 +24,14 @@ export class PaisesService {
   constructor(private http: HttpClient) { }
 
   getPaises(){
-    return this.http.get(`${this.API_URI}/paises`);
+    return this.http.get(`${this.API_URI}/paises`, {headers: headers});
   }
 
   getPais(id:string){
     return this.http.get(`${this.API_URI}/paises/${id}`);
   }
 
-  savePais(pais: Paises){
+  savePais(pais: Object){
     return this.http.post(`${this.API_URI}/paises`, pais);
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import {PaisesService} from '../../services/paises.service'
 
 @Component({
@@ -7,6 +7,7 @@ import {PaisesService} from '../../services/paises.service'
   styleUrls: ['./pais-list.component.css']
 })
 export class PaisListComponent implements OnInit {
+  @HostBinding('class') classes = 'row';
   paises: any = [];
   constructor(private paisesService:PaisesService) { }
 
