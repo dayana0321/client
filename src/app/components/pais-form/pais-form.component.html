@@ -4,28 +4,35 @@
             <form>
                 <!--Título de país-->
                 <div class="form-group mb-4">
-                    <input type="text" name="nombre_pais:" [(ngModel)]="pais.nombre_pais" placeholder="Título" class="form-control" autofocus>
+                    <input type="text" name="nombre_pais:" [(ngModel)]="paises.nombre_pais" placeholder="Título" class="form-control" autofocus>
                 </div>
                 <!--Imagen-->
                 <div class="form-group mb-4">
-                    <input type="url" name="bandera_pais" [(ngModel)]="pais.bandera_pais" placeholder="Bandera" class="form-control">
+                    <input type="url" name="bandera_pais" [(ngModel)]="paises.bandera_pais" placeholder="Bandera" class="form-control">
                 </div>
 
                 <!--Código del país-->
                 <div class="form-group mb-4">
-                    <input type="text" name="codigo_pais" [(ngModel)]="pais.codigo_pais" placeholder="Código" class="form-control">
+                    <input type="text" name="codigo_pais" [(ngModel)]="paises.codigo_pais" placeholder="Código" class="form-control">
                 </div>
+                    <!--ranking del país-->
+                    <div class="form-group mb-4">
+                        <input type="number" name="ranking_pais" [(ngModel)]="paises.ranking_pais" placeholder="Ranking" class="form-control">
+                    </div>
+                       <!--ranking del país-->
+                       <div class="form-group mb-4">
+                        <input type="number" name="copas_pais" [(ngModel)]="paises.copas_pais" placeholder="Copas" class="form-control">
+                    </div>
 
                    <!--Grupo del país-->
                    <div class="form-group mb-4">
-                    <input type="text" name="nombre_grupo" [(ngModel)]="pais.nombre_grupo" placeholder="Grupo" class="form-control">
+                    <input type="number" name="id_grupo" [(ngModel)]="paises.id_grupo" placeholder="Grupo" class="form-control">
                 </div>
 
                     <!--Region del país-->
                     <div class="form-group mb-4">
-                        <input type="text" name="nombre_region" [(ngModel)]="pais.nombre_region" placeholder="Region" class="form-control">
+                        <input type="number" name="id_region" [(ngModel)]="paises.id_region" placeholder="Region" class="form-control">
                     </div>
-
                     <button class="btn btn-success btn-block" (click)="saveNewPais()">Guardar</button>
             </form>
         </div>
@@ -34,11 +41,13 @@
 
 <div class="col-md-4">
     <div class="card card-body text-center">
-        <h5>{{pais.nombre_pais == '' ? 'Nombre del País' : pais.nombre_pais}}</h5>
+        <h5>{{paises.nombre_pais == '' ? 'Nombre del País' : paises.nombre_pais}}</h5>
         <img [src]="pais.bandera_pais == '' ? '/assets/noimage.png' : pais.bandera_pais " class="card-img-top">
-        <p>{{pais.codigo_pais == '' ? 'Código de País' : pais.codigo_pais}}</p>
-        <p>{{pais.nombre_grupo == '' ? 'Nombre del grupo' : pais.nombre_grupo}}</p>
-        <p>{{pais.nombre_region == '' ? 'Region del país' : pais.nombre_region}}</p>
+        <p>{{paises.codigo_pais == '' ? 'Código de País' : paises.codigo_pais}}</p>
+        <p>{{paises.ranking_pais == 0 ? 'Ranking de País' : paises.ranking_pais}}</p>
+        <p>{{paises.copas_pais == 0 ? 'Copas de País' : paises.copas_pais}}</p>
+        <p>{{paises.id_grupo == 0 ? 'Nombre del grupo' : paises.id_grupo}}</p>
+        <p>{{paises.id_region == 0 ? 'Region del país' : paises.id_region}}</p>
     </div>
 </div>
 <!--https://images-na.ssl-images-amazon.com/images/I/61LGgELpo0L._AC_SX466_.jpg-->

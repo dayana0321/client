@@ -1,4 +1,4 @@
 export interface TokenUsuarios{
-    usuario:string;
-    pass: string;
+    nombre:string;
+    correo: string;
 }

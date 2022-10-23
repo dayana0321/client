@@ -8,16 +8,26 @@ import {TokenUsuarios} from '../../models/TokenUsuarios'
   styleUrls: ['./token.component.css']
 })
 export class TokenComponent implements OnInit {
-
-  constructor(private tokenService: TokenService, private router: Router) { }
+  usuario = {
+    nombre: '',
+    correo: ''
+  }
+  constructor(private tokenService: TokenService) { }
 
   ngOnInit(): void {
   }
 
-  onRegister(form: { value: any; }): void{
-    this.tokenService.register(form.value).subscribe(res =>{
-      console.log('Token creado');
-    })
+  getUsuario(){
+    console.log(this.usuario);
+    this.tokenService.getToken(this.usuario)
+    .subscribe(
+      res => {
+        console.log(res);
+      },
+      err => console.error(err)
+    )
   }
+
+
 
 }

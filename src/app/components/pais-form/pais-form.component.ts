@@ -24,11 +24,11 @@ export class PaisFormComponent implements OnInit {
   paises = {
     nombre_pais:'',
     codigo_pais:'',
-    ranking_pais: '',
-    copas_pais:'',
+    ranking_pais: 0,
+    copas_pais:0,
     bandera_pais:'',
-    id_grupo:'',
-    id_region:''
+    id_grupo:0,
+    id_region:0
   }
 
   constructor(private paisesService: PaisesService) { }
@@ -36,6 +36,7 @@ export class PaisFormComponent implements OnInit {
   ngOnInit(): void {
   }
   saveNewPais(){
+    console.log(this.paises);
     //console.log(this.pais)
     this.paisesService.savePais(this.paises)
     .subscribe(
@@ -45,5 +46,4 @@ export class PaisFormComponent implements OnInit {
       err => console.error(err)
     )
   }
-
 }

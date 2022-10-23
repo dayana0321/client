@@ -16,8 +16,11 @@ import {EstadiosService} from './services/estadios.service';
 import {CalendariosService} from './services/calendarios.service';
 import { TokenComponent } from './components/token/token.component'
 import {TokenService} from './services/token.service';
+import {LoginService} from './services/login.service'
 import { PaisFormComponent } from './components/pais-form/pais-form.component';
 import { EstadiosFormComponent } from './components/estadios-form/estadios-form.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { EstadiosFormComponent } from './components/estadios-form/estadios-form.
     CalendarioListComponent,
     TokenComponent,
     PaisFormComponent,
-    EstadiosFormComponent
+    EstadiosFormComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,8 @@ import { EstadiosFormComponent } from './components/estadios-form/estadios-form.
     PaisesService,
     EstadiosService,
     CalendariosService,
-    TokenService
+    TokenService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

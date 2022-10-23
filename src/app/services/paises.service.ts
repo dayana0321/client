@@ -9,9 +9,18 @@ import { Observable } from 'rxjs';
 const headers = new HttpHeaders({
   'Content-Type': 'application/json',
   'Authorization':
-  `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9zY2FyIiwiaWF0IjoxNjY1Nzk4NDA2LCJleHAiOjE2NjgzOTA0MDZ9.d-jd3vC8CGPwQv0JhYwL-EZUKnogYrI5WB7KHw2mEtw`
+  `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhaW5hMiIsImlhdCI6MTY2NjQ1MjU3NiwiZXhwIjoxNjY5MDQ0NTc2fQ.FXouHuO4lsGC5YjrsgLxiktkZBdPLLwEvL7ROZmqLmg`
 
 });
+const token = localStorage.getItem('token')
+
+const header = new HttpHeaders({
+  'Content-Type': 'application/json',
+  'Authorization': `${token}`
+
+});
+
+//header.append('Authorization', localStorage.getItem('token'))
 
 //const requestOptions = { headers: headers };
 
@@ -32,7 +41,7 @@ export class PaisesService {
   }
 
   savePais(pais: Object){
-    return this.http.post(`${this.API_URI}/paises`, pais);
+    return this.http.post(`${this.API_URI}/paises`, pais, {headers:header});
   }
 
   deletePais(id:string){

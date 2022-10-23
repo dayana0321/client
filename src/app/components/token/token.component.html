@@ -1,18 +1,16 @@
 <div class="container">
     <div class="login">
       <div class="login-triangle"></div>
-  
-      <h2 class="login-header">Log in</h2>
-  
-      <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onRegister(frmLogin)">
+      <h2 class="login-header">Solicitante</h2>
+      <form #frmLogin="ngForm" class="login-container">
         <p>
-          <input type="text" name="email" placeholder="Email" ngModel required>
+          <input type="text" name="nombre" placeholder="Nombre de Usuario" [(ngModel)]="usuario.nombre" required>
         </p>
         <p>
-          <input type="password" name="password" placeholder="Password" ngModel required>
+          <input type="email" name="correo" placeholder="Email" [(ngModel)]="usuario.correo" required>
         </p>
         <p>
-          <input type="submit" value="Send">
+          <button class="btn" (click)="getUsuario()">Solicitar</button>
         </p>
       </form>
     </div>

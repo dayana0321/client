@@ -1,0 +1,46 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero
+{
+    height: 500px;
+    background-image:
+    linear-gradient( rgba(0, 0, 0 , 0.6) 0%, rgba(0, 0, 0 , 0.6)  50%), url('../../../assets/portada.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedor
+{
+    width: 90%;
+    max-width: 11000px;
+    margin: auto;
+    padding: var(--paddingSecciones);
+    overflow: hidden;
+}
+
+.contenedor-textos
+{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero p
+{
+    font-weight: 300;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+

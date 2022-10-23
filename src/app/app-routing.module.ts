@@ -8,12 +8,13 @@ import {CalendarioListComponent} from './components/calendario-list/calendario-l
 import {TokenComponent} from './components/token/token.component'
 import {PaisFormComponent} from './components/pais-form/pais-form.component'
 import {EstadiosFormComponent} from './components/estadios-form/estadios-form.component'
+import {HomeComponent} from './components/home/home.component'
+import {LoginComponent} from './components/login/login.component'
 
 const routes: Routes = [
   {
     path:'',
-    redirectTo: '/paises',
-    pathMatch: 'full'
+    component:HomeComponent
   },
   {
     path:'paises',
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'estadios/add',
     component: EstadiosFormComponent
+  },
+  {
+    path: 'login',
+    component:LoginComponent
   }
 ];
 
