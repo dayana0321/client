@@ -1,0 +1,57 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <!--Título de paí 1s-->
+                <div class="form-group mb-4">
+                    <input type="text" name="pais1" [(ngModel)]="calendario.pais1" placeholder="Nombre del país 1" class="form-control" autofocus>
+                </div>
+
+                  <!--Título de paí 2-->
+                  <div class="form-group mb-4">
+                    <input type="text" name="pais2" [(ngModel)]="calendario.pais2" placeholder="Nombre del país 2" class="form-control">
+                </div>
+              
+                <!--Fecha-->
+                <div class="form-group mb-4">
+                    <input type="datetime" name="hora_calendario" [(ngModel)]="calendario.hora_calendario" placeholder="Fecha y Hora del partido" class="form-control">
+                </div>
+                <div class="form-group mb-4">
+                    <input type="text" name="nombre_estadio" [(ngModel)]="calendario.nombre_estadio" placeholder="Nombre del Estadio" class="form-control">
+                </div>
+                    
+                <button class="btn btn-danger btn-block">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4  offset-md-6 mt-2 d-flex">
+    <table class="table table-bordered align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">País 1</th>
+                <th scope="col">Horario</th>
+                <th scope="col">País 2</th>
+                <th scope="col">Estadio</th>
+              </tr>
+        </thead>
+        <tbody>
+            <th scope="row">{{calendario.id_calendario}}</th>
+            <td> {{calendario.pais1}} </td>
+            <td> {{calendario.hora_calendario}} </td>
+            <td> {{calendario.pais2}} </td>
+            <td>{{calendario.nombre_estadio}}</td>
+        </tbody>
+    </table>
+    <!-- <div class="card card-body text-center">
+        <h5>{{paises.nombre_pais == '' ? 'Nombre del País' : paises.nombre_pais}}</h5>
+        <img [src]="paises.bandera_pais == '' ? '/assets/noimage.png' : paises.bandera_pais" class="card-img-top">
+        <p>{{paises.codigo_pais == '' ? 'Código de País' : paises.codigo_pais}}</p>
+        <p>{{paises.ranking_pais == 0 ? 'Ranking de País' : paises.ranking_pais}}</p>
+        <p>{{paises.copas_pais == 0 ? 'Copas de País' : paises.copas_pais}}</p>
+        <p>{{paises.id_grupo == 0 ? 'Nombre del grupo' : paises.id_grupo}}</p>
+        <p>{{paises.id_region == 0 ? 'Region del país' : paises.id_region}}</p>
+    </div> -->
+</div>

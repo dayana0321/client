@@ -12,6 +12,14 @@ const headers = new HttpHeaders({
 
 });
 
+const token = localStorage.getItem('token')
+
+const header = new HttpHeaders({
+  'Content-Type': 'application/json',
+  'Authorization': `${token}`
+
+});
+
 
 @Injectable({
   providedIn: 'root'
@@ -25,17 +33,17 @@ export class CalendariosService {
   }
 
   getCalendario(id:string){
-    return this.http.get(`${this.API_URI}/calendario/${id}`);
+    return this.http.get(`${this.API_URI}/calendario/${id}`, {headers: headers});
   }
 
-  saveCalendarios(calendario:Calendarios){
-    return this.http.post(`${this.API_URI}/calendario`, calendario);
+  saveCalendarios(calendario:Object){
+    return this.http.post(`${this.API_URI}/calendario`, calendario, {headers:header});
   }
 
   deleteCalendario(id:string){
     return this.http.delete(`${this.API_URI}/calendario/${id}`);
   }
-  updateCalendario(id:string, updatedCalendario:Calendarios): Observable<Calendarios>{
+  updateCalendario(id:string, updatedCalendario:Object){
     return this.http.put(`${this.API_URI}/paises/${id}`, updatedCalendario);
   }
 }

@@ -19,5 +19,4 @@ export class EstadiosListComponent implements OnInit {
       err => console.error(err)
     );
   }
-
 }

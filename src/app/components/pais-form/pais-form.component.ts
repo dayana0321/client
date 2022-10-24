@@ -1,6 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Paises } from 'src/app/models/Paises';
 import {PaisesService} from '../../services/paises.service'
+import {Router, ActivatedRoute} from '@angular/router'
 
 @Component({
   selector: 'app-pais-form',
@@ -21,7 +22,7 @@ export class PaisFormComponent implements OnInit {
     nombre_grupo:''
   };
 
-  paises = {
+  paises:any = {
     nombre_pais:'',
     codigo_pais:'',
     ranking_pais: 0,
@@ -29,12 +30,35 @@ export class PaisFormComponent implements OnInit {
     bandera_pais:'',
     id_grupo:0,
     id_region:0
-  }
+  };
 
-  constructor(private paisesService: PaisesService) { }
+  edit: boolean = false;
+
+  constructor(private paisesService: PaisesService, private route: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const params = this.activatedRoute.snapshot.params;
+    console.log(params);
+
+    if(params['id']){
+
+      this.paisesService.getPais(params['id'])
+        .subscribe(
+          res => {
+
+            console.log(res);
+
+            this.paises = res;
+
+            for(let p of this.paises){
+              this.paises = p
+            }//fin for
+          },
+          err => console.log(err)//fin res
+        )//fin subscribe
+    }//fin if
   }
+  
   saveNewPais(){
     console.log(this.paises);
     //console.log(this.pais)
@@ -42,8 +66,20 @@ export class PaisFormComponent implements OnInit {
     .subscribe(
       res => {
         console.log(res);
+        this.route.navigate(['/paises/crud'])
       },
       err => console.error(err)
     )
+  }
+
+  actualizarPais(){
+    this.paisesService.updatePais(this.paises.id, this.paises)
+    .subscribe(
+      res =>{
+        console.log(res)
+        this.route.navigate(['/paises/crud'])
+      },
+      err => console.log(err)
+    );
   }
 }

@@ -37,7 +37,7 @@ export class PaisesService {
   }
 
   getPais(id:string){
-    return this.http.get(`${this.API_URI}/paises/${id}`);
+    return this.http.get(`${this.API_URI}/paises/${id}`, {headers: headers});
   }
 
   savePais(pais: Object){
@@ -45,10 +45,10 @@ export class PaisesService {
   }
 
   deletePais(id:string){
-    return this.http.delete(`${this.API_URI}/paises/${id}`);
+    return this.http.delete(`${this.API_URI}/paises/${id}`, {headers: header});
   }
 
-  updatePais(id:string, updatedPais:Paises): Observable<Paises>{
-    return this.http.put(`${this.API_URI}/paises/${id}`, updatedPais);
+  updatePais(id:string, updatedPais:Object){
+    return this.http.put(`${this.API_URI}/paises/${id}`, updatedPais, {headers:header} );
   }
 }

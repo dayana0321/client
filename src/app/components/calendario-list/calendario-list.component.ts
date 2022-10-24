@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CalendariosService} from '../../services/calendarios.service'
 
+
 @Component({
   selector: 'app-calendario-list',
   templateUrl: './calendario-list.component.html',
@@ -16,7 +17,7 @@ export class CalendarioListComponent implements OnInit {
       res =>{
         this.calendarios = res;
         console.log(this.calendarios);
-      } ,
+      },
       err => console.error(err)
     );
   }

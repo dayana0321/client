@@ -21,6 +21,9 @@ import { PaisFormComponent } from './components/pais-form/pais-form.component';
 import { EstadiosFormComponent } from './components/estadios-form/estadios-form.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { PaisCrudComponent } from './components/pais-crud/pais-crud.component';
+import { EstadiosCrudComponent } from './components/estadios-crud/estadios-crud.component';
+import { CalendarioFormComponent } from './components/calendario-form/calendario-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { LoginComponent } from './components/login/login.component';
     PaisFormComponent,
     EstadiosFormComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    PaisCrudComponent,
+    EstadiosCrudComponent,
+    CalendarioFormComponent
   ],
   imports: [
     BrowserModule,

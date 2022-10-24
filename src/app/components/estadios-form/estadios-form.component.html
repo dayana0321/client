@@ -26,7 +26,7 @@
                         <textarea type="text" name="descripcion_estadio" [(ngModel)]="estadios.descripcion_estadio" placeholder="Descripcion" class="form-control"></textarea>
                     </div>
 
-                    <button class="btn btn-success btn-block" (click)="saveNewEstadio()">Guardar</button>
+                    <button class="btn btn-success btn-block" (click)= "edit ? actualizarEstadio(): saveNewEstadio()">Guardar</button>
             </form>
         </div>
     </div>

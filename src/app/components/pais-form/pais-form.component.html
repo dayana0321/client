@@ -33,7 +33,7 @@
                     <div class="form-group mb-4">
                         <input type="number" name="id_region" [(ngModel)]="paises.id_region" placeholder="Region" class="form-control">
                     </div>
-                    <button class="btn btn-success btn-block" (click)="saveNewPais()">Guardar</button>
+                    <button class="btn btn-danger btn-block" (click)=" edit ? actualizarPais(): saveNewPais()">Guardar</button>
             </form>
         </div>
     </div>
@@ -42,7 +42,7 @@
 <div class="col-md-4">
     <div class="card card-body text-center">
         <h5>{{paises.nombre_pais == '' ? 'Nombre del País' : paises.nombre_pais}}</h5>
-        <img [src]="pais.bandera_pais == '' ? '/assets/noimage.png' : pais.bandera_pais " class="card-img-top">
+        <img [src]="paises.bandera_pais == '' ? '/assets/noimage.png' : paises.bandera_pais" class="card-img-top">
         <p>{{paises.codigo_pais == '' ? 'Código de País' : paises.codigo_pais}}</p>
         <p>{{paises.ranking_pais == 0 ? 'Ranking de País' : paises.ranking_pais}}</p>
         <p>{{paises.copas_pais == 0 ? 'Copas de País' : paises.copas_pais}}</p>

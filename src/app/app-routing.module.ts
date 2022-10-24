@@ -5,11 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import {PaisListComponent} from './components/pais-list/pais-list.component'
 import {EstadiosListComponent} from './components/estadios-list/estadios-list.component'
 import {CalendarioListComponent} from './components/calendario-list/calendario-list.component'
+import {CalendarioFormComponent} from './components/calendario-form/calendario-form.component'
 import {TokenComponent} from './components/token/token.component'
 import {PaisFormComponent} from './components/pais-form/pais-form.component'
 import {EstadiosFormComponent} from './components/estadios-form/estadios-form.component'
 import {HomeComponent} from './components/home/home.component'
 import {LoginComponent} from './components/login/login.component'
+import {PaisCrudComponent} from './components/pais-crud/pais-crud.component'
+import {EstadiosCrudComponent} from './components/estadios-crud/estadios-crud.component'
 
 const routes: Routes = [
   {
@@ -43,6 +46,26 @@ const routes: Routes = [
   {
     path: 'login',
     component:LoginComponent
+  },
+  {
+    path:'paises/crud',
+    component:PaisCrudComponent
+  },
+  {
+    path: 'estadios/crud',
+    component:EstadiosCrudComponent
+  },
+  {
+    path:'paises/edit/:id',
+    component: PaisFormComponent
+  },
+  {
+    path: 'estadios/edit/:id',
+    component: EstadiosFormComponent
+  },
+  {
+    path: 'calendario/add',
+    component: CalendarioFormComponent
   }
 ];
 

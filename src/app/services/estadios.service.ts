@@ -13,6 +13,14 @@ const headers = new HttpHeaders({
 
 });
 
+const token = localStorage.getItem('token')
+
+const header = new HttpHeaders({
+  'Content-Type': 'application/json',
+  'Authorization': `${token}`
+
+});
+
 
 @Injectable({
   providedIn: 'root'
@@ -27,18 +35,18 @@ export class EstadiosService {
   }
 
   getEstadio(id:string){
-    return this.http.get(`${this.API_URI}/estadios/${id}`);
+    return this.http.get(`${this.API_URI}/estadios/${id}`, {headers: headers});
   }
 
-  saveEstadio(estadio: Estadios){
-    return this.http.post(`${this.API_URI}/estadios`, estadio);
+  saveEstadio(estadio: Object){
+    return this.http.post(`${this.API_URI}/estadios`, estadio,{headers:header});
   }
 
   deleteEstadio(id:string){
-    return this.http.delete(`${this.API_URI}/estadios/${id}`);
+    return this.http.delete(`${this.API_URI}/estadios/${id}`,{headers: header});
   }
 
-  updateEstadio(id:string, updatedEstadio:Estadios): Observable<Estadios>{
+  updateEstadio(id:string, updatedEstadio:Object){
     return this.http.put(`${this.API_URI}/estadios/${id}`, updatedEstadio);
   }
 }
