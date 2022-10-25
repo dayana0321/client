@@ -41,9 +41,9 @@ export class CalendariosService {
   }
 
   deleteCalendario(id:string){
-    return this.http.delete(`${this.API_URI}/calendario/${id}`);
+    return this.http.delete(`${this.API_URI}/calendario/${id}`, {headers: header});
   }
   updateCalendario(id:string, updatedCalendario:Object){
-    return this.http.put(`${this.API_URI}/paises/${id}`, updatedCalendario);
+    return this.http.put(`${this.API_URI}/calendario/${id}`, updatedCalendario,  {headers:header});
   }
 }

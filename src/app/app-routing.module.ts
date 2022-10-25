@@ -6,6 +6,7 @@ import {PaisListComponent} from './components/pais-list/pais-list.component'
 import {EstadiosListComponent} from './components/estadios-list/estadios-list.component'
 import {CalendarioListComponent} from './components/calendario-list/calendario-list.component'
 import {CalendarioFormComponent} from './components/calendario-form/calendario-form.component'
+import {CalendarioCrudComponent} from './components/calendario-crud/calendario-crud.component'
 import {TokenComponent} from './components/token/token.component'
 import {PaisFormComponent} from './components/pais-form/pais-form.component'
 import {EstadiosFormComponent} from './components/estadios-form/estadios-form.component'
@@ -65,6 +66,14 @@ const routes: Routes = [
   },
   {
     path: 'calendario/add',
+    component: CalendarioFormComponent
+  },
+  {
+    path: 'calendario/crud',
+    component: CalendarioCrudComponent
+  },
+  {
+    path: 'calendario/edit/:id',
     component: CalendarioFormComponent
   }
 ];

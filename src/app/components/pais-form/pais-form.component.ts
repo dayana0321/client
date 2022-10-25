@@ -31,6 +31,7 @@ export class PaisFormComponent implements OnInit {
     id_grupo:0,
     id_region:0
   };
+  //falso: guardar - actualizar: true
 
   edit: boolean = false;
 
@@ -42,7 +43,7 @@ export class PaisFormComponent implements OnInit {
 
     if(params['id']){
 
-      this.paisesService.getPais(params['id'])
+      this.paisesService.getOnePais(params['id'])
         .subscribe(
           res => {
 
@@ -52,6 +53,7 @@ export class PaisFormComponent implements OnInit {
 
             for(let p of this.paises){
               this.paises = p
+              this.edit = true
             }//fin for
           },
           err => console.log(err)//fin res
@@ -73,10 +75,11 @@ export class PaisFormComponent implements OnInit {
   }
 
   actualizarPais(){
-    this.paisesService.updatePais(this.paises.id, this.paises)
+    this.paisesService.updatePais(this.paises.id_pais, this.paises)
     .subscribe(
       res =>{
         console.log(res)
+        console.log(this.paises.id);
         this.route.navigate(['/paises/crud'])
       },
       err => console.log(err)

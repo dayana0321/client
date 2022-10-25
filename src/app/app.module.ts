@@ -24,6 +24,7 @@ import { LoginComponent } from './components/login/login.component';
 import { PaisCrudComponent } from './components/pais-crud/pais-crud.component';
 import { EstadiosCrudComponent } from './components/estadios-crud/estadios-crud.component';
 import { CalendarioFormComponent } from './components/calendario-form/calendario-form.component';
+import { CalendarioCrudComponent } from './components/calendario-crud/calendario-crud.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CalendarioFormComponent } from './components/calendario-form/calendario
     LoginComponent,
     PaisCrudComponent,
     EstadiosCrudComponent,
-    CalendarioFormComponent
+    CalendarioFormComponent,
+    CalendarioCrudComponent
   ],
   imports: [
     BrowserModule,

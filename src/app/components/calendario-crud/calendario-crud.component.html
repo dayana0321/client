@@ -1,0 +1,261 @@
+<div class="Jornada1">
+    <h5>Jornada 1</h5>
+    <div class="RegistrosJ1 table-responsive" >
+       <table class="table table-bordered align-middle">
+        <thead class="table-dark">
+          <tr>
+             <th scope="col">No.</th>
+             <th scope="col">País 1</th>
+             <th scope="col">Horario</th>
+             <th scope="col">País 2</th>
+             <th scope="col">Estadio</th>
+             <th scope="col">Acciones</th>
+           </tr>
+           </thead>
+          <tbody *ngFor="let calendario of calendarios[0]">
+            <tr class="">
+              <th scope="row">{{calendario.id_calendario}}</th>
+              <td> {{calendario.pais1}} </td>
+              <td> {{calendario.hora_calendario}} </td>
+              <td> {{calendario.pais2}} </td>
+              <td>{{calendario.nombre_estadio}}</td>
+              <td><button
+                class="btn btn-danger" (click)="eliminarCalendario(calendario.id_calendario)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                </button><a class="btn btn-info btn-block" [routerLink]="['/calendario/edit', calendario.id_calendario]">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  <br>
+
+  <!--Jornada 2-->
+  <div class="Jornada2">
+    <h5>Jornada 2</h5>
+    <div class="RegistrosJ2" >
+       <table class="table table-bordered">
+        <thead class="table-dark">
+         <tr>
+            <th scope="col">No.</th>
+            <th scope="col">País 1</th>
+            <th scope="col">Horario</th>
+            <th scope="col">País 2</th>
+            <th scope="col">Estadio</th>
+            <th scope="col">Acciones</th>
+          </tr>
+          </thead>
+          <tbody *ngFor="let calendario of calendarios[1] ">
+            <tr>
+              <td>{{calendario.id_calendario}}</td>
+              <td>{{calendario.pais1}}</td>
+              <td>{{calendario.hora_calendario}}</td>
+              <td>{{calendario.pais2}}</td>
+              <td>{{calendario.nombre_estadio}}</td>
+              <td><button
+                class="btn btn-danger" (click)="eliminarCalendario(calendario.id_calendario)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                </button><a class="btn btn-info btn-block" [routerLink]="['/calendario/edit', calendario.id_calendario]">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  
+  
+  <!--Jornada 3-->
+  <div class="Jornada3">
+    <h5>Jornada 3</h5>
+    <div class="RegistrosJ3">
+       <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+             <th scope="col">No.</th>
+             <th scope="col">País 1</th>
+             <th scope="col">Horario</th>
+             <th scope="col">País 2</th>
+             <th scope="col">Estadio</th>
+             <th scope="col">Acciones</th>
+           </tr>
+           </thead>
+          <tbody *ngFor="let calendario of calendarios[2]">
+            <tr>
+              <td>{{calendario.id_calendario}}</td>
+              <td>{{calendario.pais1}}</td>
+              <td>{{calendario.hora_calendario}}</td>
+              <td>{{calendario.pais2}}</td>
+              <td>{{calendario.nombre_estadio}}</td>
+              <td><button
+                class="btn btn-danger" (click)="eliminarCalendario(calendario.id_calendario)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                </button><a class="btn btn-info btn-block" [routerLink]="['/calendario/edit', calendario.id_calendario]">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  <br>
+  
+  <!--Jornada 4-->
+  <div class="Jornada4">
+    <h5>Octavos de Final</h5>
+    <div class="RegistrosJ4">
+       <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+             <th scope="col">No.</th>
+             <th scope="col">País 1</th>
+             <th scope="col">Horario</th>
+             <th scope="col">País 2</th>
+             <th scope="col">Estadio</th>
+             <th scope="col">Acciones</th>
+           </tr>
+           </thead>
+          <tbody *ngFor="let calendario of calendarios[3] ">
+            <tr>
+              <td>{{calendario.id_calendario}}</td>
+              <td>{{calendario.pais1}}</td>
+              <td>{{calendario.hora_calendario}}</td>
+              <td>{{calendario.pais2}}</td>
+              <td>{{calendario.nombre_estadio}}</td>
+              <td><button
+                class="btn btn-danger" (click)="eliminarCalendario(calendario.id_calendario)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                </button><a class="btn btn-info btn-block" [routerLink]="['/calendario/edit', calendario.id_calendario]">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  
+  <br>
+  
+  <!--Jornada 5-->
+  <div class="Jornada5">
+    <h5>Cuartos de Final</h5>
+    <div class="RegistrosJ5">
+       <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+             <th scope="col">No.</th>
+             <th scope="col">País 1</th>
+             <th scope="col">Horario</th>
+             <th scope="col">País 2</th>
+             <th scope="col">Estadio</th>
+             <th scope="col">Acciones</th>
+           </tr>
+           </thead>
+          <tbody *ngFor="let calendario of calendarios[4] ">
+            <tr>
+              <td>{{calendario.id_calendario}}</td>
+              <td>{{calendario.pais1}}</td>
+              <td>{{calendario.hora_calendario}}</td>
+              <td>{{calendario.pais2}}</td>
+              <td>{{calendario.nombre_estadio}}</td>
+               <td><button
+                class="btn btn-danger" (click)="eliminarCalendario(calendario.id_calendario)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                </button><a class="btn btn-info btn-block" [routerLink]="['/calendario/edit', calendario.id_calendario]">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  
+  <!--Jornada 6-->
+  <div class="Jornada6">
+    <h5>Semifinales</h5>
+    <div class="RegistrosJ6">
+       <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+             <th scope="col">No.</th>
+             <th scope="col">País 1</th>
+             <th scope="col">Horario</th>
+             <th scope="col">País 2</th>
+             <th scope="col">Estadio</th>
+             <th scope="col">Acciones</th>
+           </tr>
+           </thead>
+          <tbody *ngFor="let calendario of calendarios[5] ">
+            <tr>
+              <td>{{calendario.id_calendario}}</td>
+              <td>{{calendario.pais1}}</td>
+              <td>{{calendario.hora_calendario}}</td>
+              <td>{{calendario.pais2}}</td>
+              <td>{{calendario.nombre_estadio}}</td>
+              <td><button
+                class="btn btn-danger" (click)="eliminarCalendario(calendario.id_calendario)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                </button><a class="btn btn-info btn-block" [routerLink]="['/calendario/edit', calendario.id_calendario]">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  <br>
+  <br>
+  <!--Jornada 6-->
+  <div class="Jornada7">
+    <h5>Tercer y Cuarto</h5>
+    <div class="RegistrosJ7">
+       <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+             <th scope="col">No.</th>
+             <th scope="col">País 1</th>
+             <th scope="col">Horario</th>
+             <th scope="col">País 2</th>
+             <th scope="col">Estadio</th>
+             <th scope="col">Acciones</th>
+           </tr>
+           </thead>
+          <tbody *ngFor="let calendario of calendarios[6]">
+            <tr>
+              <td>{{calendario.id_calendario}}</td>
+              <td>{{calendario.pais1}}</td>
+              <td>{{calendario.hora_calendario}}</td>
+              <td>{{calendario.pais2}}</td>
+              <td>{{calendario.nombre_estadio}}</td>
+              <td><button
+                class="btn btn-danger" (click)="eliminarCalendario(calendario.id_calendario)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                </button><a class="btn btn-info btn-block" [routerLink]="['/calendario/edit', calendario.id_calendario]">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  <br>
+  <br>
+  <!--Jornada 6-->
+  <div class="Jornada8">
+    <h5>Final</h5>
+    <div class="RegistrosJ7">
+       <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+             <th scope="col">No.</th>
+             <th scope="col">País 1</th>
+             <th scope="col">Horario</th>
+             <th scope="col">País 2</th>
+             <th scope="col">Estadio</th>
+             <th scope="col">Acciones</th>
+           </tr>
+           </thead>
+          <tbody *ngFor="let calendario of calendarios[7] ">
+            <tr>
+              <td>{{calendario.id_calendario}}</td>
+              <td>{{calendario.pais1}}</td>
+              <td>{{calendario.hora_calendario}}</td>
+              <td>{{calendario.pais2}}</td>
+              <td>{{calendario.nombre_estadio}}</td>
+              <td><button
+                class="btn btn-danger" (click)="eliminarCalendario(calendario.id_calendario)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                </button><a class="btn btn-info btn-block" [routerLink]="['/calendario/edit', calendario.id_calendario]">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>

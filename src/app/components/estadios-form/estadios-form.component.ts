@@ -16,7 +16,7 @@ export class EstadiosFormComponent implements OnInit {
     capacidad_estadio: '',
     ciudad_estadio: '',
     descripcion_estadio: '',
-    foto_estadio: '',
+    foto_estadio: ''
   }
 
   edit: boolean = false;
@@ -37,7 +37,8 @@ export class EstadiosFormComponent implements OnInit {
             this.estadios = res;
 
             for(let e of this.estadios){
-              this.estadios = e
+              this.estadios = e;
+              this.edit = true;
             }//fin for
           },
           err => console.log(err)//fin res
@@ -56,7 +57,7 @@ export class EstadiosFormComponent implements OnInit {
   }
 
   actualizarEstadio(){
-    this.estadiosService.updateEstadio(this.estadios.id, this.estadios)
+    this.estadiosService.updateEstadio(this.estadios.id_estadio, this.estadios)
     .subscribe(
       res =>{
         console.log(res)

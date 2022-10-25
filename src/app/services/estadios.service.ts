@@ -47,6 +47,6 @@ export class EstadiosService {
   }
 
   updateEstadio(id:string, updatedEstadio:Object){
-    return this.http.put(`${this.API_URI}/estadios/${id}`, updatedEstadio);
+    return this.http.put(`${this.API_URI}/estadios/${id}`, updatedEstadio,{headers: header});
   }
 }

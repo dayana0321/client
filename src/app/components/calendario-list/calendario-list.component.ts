@@ -21,5 +21,4 @@ export class CalendarioListComponent implements OnInit {
       err => console.error(err)
     );
   }
-
 }

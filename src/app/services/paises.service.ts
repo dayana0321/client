@@ -40,6 +40,10 @@ export class PaisesService {
     return this.http.get(`${this.API_URI}/paises/${id}`, {headers: headers});
   }
 
+  getOnePais(id:string){
+    return this.http.get(`${this.API_URI}/paises/pais/${id}`, {headers: headers});
+  }
+
   savePais(pais: Object){
     return this.http.post(`${this.API_URI}/paises`, pais, {headers:header});
   }
