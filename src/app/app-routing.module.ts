@@ -10,6 +10,8 @@ import {CalendarioCrudComponent} from './components/calendario-crud/calendario-c
 import {TokenComponent} from './components/token/token.component'
 import {PaisFormComponent} from './components/pais-form/pais-form.component'
 import {EstadiosFormComponent} from './components/estadios-form/estadios-form.component'
+import {ResultadosListComponent} from './components/resultados-list/resultados-list.component'
+import {TbposicionesListComponent} from './components/tbposiciones-list/tbposiciones-list.component'
 import {HomeComponent} from './components/home/home.component'
 import {LoginComponent} from './components/login/login.component'
 import {PaisCrudComponent} from './components/pais-crud/pais-crud.component'
@@ -75,6 +77,14 @@ const routes: Routes = [
   {
     path: 'calendario/edit/:id',
     component: CalendarioFormComponent
+  },
+  {
+    path: 'resultados',
+    component:ResultadosListComponent
+  },
+  {
+    path: 'tbposiciones',
+    component: TbposicionesListComponent
   }
 ];
 

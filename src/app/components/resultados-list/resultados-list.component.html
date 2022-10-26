@@ -1,0 +1,225 @@
+<app-navigation></app-navigation>
+<!---------------------------Jornada 1------------------------------------->
+<div class="Jornada1">
+    <h5>Jornada 1</h5>
+    <div class="registrosJ1 table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                 </tr>
+            </thead>
+            <tbody *ngFor="let resultado of resultados[0]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!---------------------------Jornada 2------------------------------------->
+<div class="Jornada2">
+    <h5>Jornada 2</h5>
+    <div class="registrosJ2 table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                 </tr>
+            </thead>
+            <tbody  *ngFor="let resultado of resultados[1]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!---------------------------Jornada 3------------------------------------->
+<div class="Jornada3">
+    <h5>Jornada 3</h5>
+    <div class="registrosJ3 table-responsive">
+        <table class="table table-bordered align-middle">
+             <thead class="table-dark">
+                 <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                 </tr>
+             </thead>
+            <tbody  *ngFor="let resultado of resultados[2]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!---------------------------Jornada 4------------------------------------->
+<div class="Jornada4">
+    <h5>Octavos de Final</h5>
+    <div class="registrosJ4 table-responsive">
+        <table class="table table-bordered align-middle">
+             <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                 </tr>
+             </thead>
+            <tbody  *ngFor="let resultado of resultados[3]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!---------------------------Jornada 5------------------------------------->
+<div class="Jornada5">
+    <h5> Cuartos de Final</h5>
+    <div class="registrosJ5 table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                 </tr>
+            </thead>
+            <tbody  *ngFor="let resultado of resultados[4]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!---------------------------Jornada 6------------------------------------->
+<div class="Jornada6">
+    <h5>Semifinales</h5> 
+    <div class="registrosJ6 table-responsive">
+        <table class="table table-bordered align-middle">
+             <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                 </tr>
+             </thead>
+            <tbody  *ngFor="let resultado of resultados[5]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>   
+</div>
+<!---------------------------Jornada 7------------------------------------->
+<div class="Jornada7">
+    <h5>Tercer y Cuarto</h5>   
+    <div class="registrosJ7 table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                 <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                 </tr>
+            </thead>
+            <tbody  *ngFor="let resultado of resultados[6]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div> 
+</div>
+<!---------------------------Jornada 8------------------------------------->
+<div class="Jornada8">
+    <h5>Final</h5>    
+    <div class="registrosJ8 table-responsive">
+        <table class="table table-bordered align-middle">
+             <thead class="table-dark">
+                 <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                 </tr>
+             </thead>
+            <tbody  *ngFor="let resultado of resultados[7]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -17,14 +17,19 @@ import {CalendariosService} from './services/calendarios.service';
 import { TokenComponent } from './components/token/token.component'
 import {TokenService} from './services/token.service';
 import {LoginService} from './services/login.service'
+import {ResultadosService} from './services/resultados.service'
 import { PaisFormComponent } from './components/pais-form/pais-form.component';
 import { EstadiosFormComponent } from './components/estadios-form/estadios-form.component';
+import {TbposicionesService} from './services/tbposiciones.service'
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { PaisCrudComponent } from './components/pais-crud/pais-crud.component';
 import { EstadiosCrudComponent } from './components/estadios-crud/estadios-crud.component';
 import { CalendarioFormComponent } from './components/calendario-form/calendario-form.component';
 import { CalendarioCrudComponent } from './components/calendario-crud/calendario-crud.component';
+import { ResultadosListComponent } from './components/resultados-list/resultados-list.component';
+import { TbposicionesListComponent } from './components/tbposiciones-list/tbposiciones-list.component';
+import { NavigationLComponent } from './components/navigation-l/navigation-l.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,10 @@ import { CalendarioCrudComponent } from './components/calendario-crud/calendario
     PaisCrudComponent,
     EstadiosCrudComponent,
     CalendarioFormComponent,
-    CalendarioCrudComponent
+    CalendarioCrudComponent,
+    ResultadosListComponent,
+    TbposicionesListComponent,
+    NavigationLComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +62,9 @@ import { CalendarioCrudComponent } from './components/calendario-crud/calendario
     EstadiosService,
     CalendariosService,
     TokenService,
-    LoginService
+    LoginService,
+    ResultadosService,
+    TbposicionesService
   ],
   bootstrap: [AppComponent]
 })
