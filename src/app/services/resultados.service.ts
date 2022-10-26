@@ -27,7 +27,7 @@ export class ResultadosService {
   }
 
   getResultado(id:string){
-    return this.http.get(`${this.API_URI}/resultados/${id}`, {headers: headers});
+    return this.http.get(`${this.API_URI}/resultados/res/${id}`, {headers: headers});
   }
 
   saveResultado(resultado: Object){

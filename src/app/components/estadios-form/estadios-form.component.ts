@@ -61,7 +61,7 @@ export class EstadiosFormComponent implements OnInit {
     .subscribe(
       res =>{
         console.log(res)
-        this.route.navigate(['/paises/crud'])
+        this.route.navigate(['/estadios/crud'])
       },
       err => console.log(err)
     );

@@ -30,6 +30,11 @@ import { CalendarioCrudComponent } from './components/calendario-crud/calendario
 import { ResultadosListComponent } from './components/resultados-list/resultados-list.component';
 import { TbposicionesListComponent } from './components/tbposiciones-list/tbposiciones-list.component';
 import { NavigationLComponent } from './components/navigation-l/navigation-l.component';
+import { ResultadosFormComponent } from './components/resultados-form/resultados-form.component';
+import { ResultadosCrudComponent } from './components/resultados-crud/resultados-crud.component';
+import { TbposicionesFormComponent } from './components/tbposiciones-form/tbposiciones-form.component';
+import { TbposicionesCrudComponent } from './components/tbposiciones-crud/tbposiciones-crud.component';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [
@@ -49,7 +54,11 @@ import { NavigationLComponent } from './components/navigation-l/navigation-l.com
     CalendarioCrudComponent,
     ResultadosListComponent,
     TbposicionesListComponent,
-    NavigationLComponent
+    NavigationLComponent,
+    ResultadosFormComponent,
+    ResultadosCrudComponent,
+    TbposicionesFormComponent,
+    TbposicionesCrudComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +73,9 @@ import { NavigationLComponent } from './components/navigation-l/navigation-l.com
     TokenService,
     LoginService,
     ResultadosService,
-    TbposicionesService
+    TbposicionesService,
+    {provide:JWT_OPTIONS, useValue:JWT_OPTIONS},
+    JwtHelperService
   ],
   bootstrap: [AppComponent]
 })

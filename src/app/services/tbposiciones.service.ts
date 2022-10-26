@@ -29,7 +29,7 @@ export class TbposicionesService {
   }
 
   getTbposicion(id:string){
-    return this.http.get(`${this.API_URI}/tbposiciones/${id}`, {headers: headers});
+    return this.http.get(`${this.API_URI}/tbposiciones/pais/${id}`, {headers: headers});
   }
 
   SaveTbposiciones(resultado: Object){

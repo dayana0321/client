@@ -1,0 +1,358 @@
+<app-navigation-l></app-navigation-l>
+<!---------------------------Grupo A------------------------------------->
+<div class="grupoA">
+    <h5>Grupo A</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">País</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">PT</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody *ngFor="let tb of tbposiciones[0]">
+                <tr class="">
+                    <th scope="row">{{tb.id_pais}}</th>
+                    <td> {{tb.nombre_pais}} </td>
+                    <td> {{tb.golesC_tablaP}} </td>
+                    <td> {{tb.golesF_tablaP
+                    }}</td>
+                    <td> {{tb.partidosE_tablaP}} </td>
+                    <td>{{tb.partidosG_tablaP
+                    }}</td>
+                    <td>{{tb.partidosJ_tablaP
+                    }}</td>
+                    <td>{{tb.partidosP_tablaP
+                    }}</td>
+                    <td>{{tb.partidosT_tablaP
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarTbposiciones(tbposiciones.id_tablaP)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/tbposiciones/edit', tbposiciones.id_tablaP]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!---------------------------Grupo B------------------------------------->
+<div class="grupoB">
+    <h5>Grupo B</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">País</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">PT</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody *ngFor="let tb of tbposiciones[1]">
+                <tr class="">
+                    <th scope="row">{{tb.id_pais}}</th>
+                    <td> {{tb.nombre_pais}} </td>
+                    <td> {{tb.golesC_tablaP}} </td>
+                    <td> {{tb.golesF_tablaP
+                    }}</td>
+                    <td> {{tb.partidosE_tablaP}} </td>
+                    <td>{{tb.partidosG_tablaP
+                    }}</td>
+                    <td>{{tb.partidosJ_tablaP
+                    }}</td>
+                    <td>{{tb.partidosP_tablaP
+                    }}</td>
+                    <td>{{tb.partidosT_tablaP
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarTbposiciones(tbposiciones.id_tablaP)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/tbposiciones/edit', tbposiciones.id_tablaP]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!---------------------------Grupo C------------------------------------->
+<div class="grupoC">
+    <h5>Grupo C</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">País</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">PT</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody *ngFor="let tb of tbposiciones[2]">
+                <tr class="">
+                    <th scope="row">{{tb.id_pais}}</th>
+                    <td> {{tb.nombre_pais}} </td>
+                    <td> {{tb.golesC_tablaP}} </td>
+                    <td> {{tb.golesF_tablaP
+                    }}</td>
+                    <td> {{tb.partidosE_tablaP}} </td>
+                    <td>{{tb.partidosG_tablaP
+                    }}</td>
+                    <td>{{tb.partidosJ_tablaP
+                    }}</td>
+                    <td>{{tb.partidosP_tablaP
+                    }}</td>
+                    <td>{{tb.partidosT_tablaP
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarTbposiciones(tbposiciones.id_tablaP)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/tbposiciones/edit', tbposiciones.id_tablaP]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!---------------------------Grupo D------------------------------------->
+<div class="grupoD">
+    <h5>Grupo D</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">País</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">PT</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody *ngFor="let tb of tbposiciones[3]">
+                <tr class="">
+                    <th scope="row">{{tb.id_pais}}</th>
+                    <td> {{tb.nombre_pais}} </td>
+                    <td> {{tb.golesC_tablaP}} </td>
+                    <td> {{tb.golesF_tablaP
+                    }}</td>
+                    <td> {{tb.partidosE_tablaP}} </td>
+                    <td>{{tb.partidosG_tablaP
+                    }}</td>
+                    <td>{{tb.partidosJ_tablaP
+                    }}</td>
+                    <td>{{tb.partidosP_tablaP
+                    }}</td>
+                    <td>{{tb.partidosT_tablaP
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarTbposiciones(tbposiciones.id_tablaP)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/tbposiciones/edit', tbposiciones.id_tablaP]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!---------------------------Grupo E------------------------------------->
+<div class="grupoE">
+    <h5>Grupo E</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">País</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">PT</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody *ngFor="let tb of tbposiciones[4]">
+                <tr class="">
+                    <th scope="row">{{tb.id_pais}}</th>
+                    <td> {{tb.nombre_pais}} </td>
+                    <td> {{tb.golesC_tablaP}} </td>
+                    <td> {{tb.golesF_tablaP
+                    }}</td>
+                    <td> {{tb.partidosE_tablaP}} </td>
+                    <td>{{tb.partidosG_tablaP
+                    }}</td>
+                    <td>{{tb.partidosJ_tablaP
+                    }}</td>
+                    <td>{{tb.partidosP_tablaP
+                    }}</td>
+                    <td>{{tb.partidosT_tablaP
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarTbposiciones(tbposiciones.id_tablaP)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/tbposiciones/edit', tbposiciones.id_tablaP]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!---------------------------Grupo F------------------------------------->
+<div class="grupoF">
+    <h5>Grupo F</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">País</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">PT</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody *ngFor="let tb of tbposiciones[5]">
+                <tr class="">
+                    <th scope="row">{{tb.id_pais}}</th>
+                    <td> {{tb.nombre_pais}} </td>
+                    <td> {{tb.golesC_tablaP}} </td>
+                    <td> {{tb.golesF_tablaP
+                    }}</td>
+                    <td> {{tb.partidosE_tablaP}} </td>
+                    <td>{{tb.partidosG_tablaP
+                    }}</td>
+                    <td>{{tb.partidosJ_tablaP
+                    }}</td>
+                    <td>{{tb.partidosP_tablaP
+                    }}</td>
+                    <td>{{tb.partidosT_tablaP
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarTbposiciones(tbposiciones.id_tablaP)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/tbposiciones/edit', tbposiciones.id_tablaP]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!---------------------------Grupo G------------------------------------->
+<div class="grupoG">
+    <h5>Grupo G</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">País</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">PT</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody *ngFor="let tb of tbposiciones[6]">
+                <tr class="">
+                    <th scope="row">{{tb.id_pais}}</th>
+                    <td> {{tb.nombre_pais}} </td>
+                    <td> {{tb.golesC_tablaP}} </td>
+                    <td> {{tb.golesF_tablaP
+                    }}</td>
+                    <td> {{tb.partidosE_tablaP}} </td>
+                    <td>{{tb.partidosG_tablaP
+                    }}</td>
+                    <td>{{tb.partidosJ_tablaP
+                    }}</td>
+                    <td>{{tb.partidosP_tablaP
+                    }}</td>
+                    <td>{{tb.partidosT_tablaP
+                    }}</td>
+                     <td><button
+                class="btn btn-danger" (click)="eliminarTbposiciones(tbposiciones.id_tablaP)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                </button><a class="btn btn-info btn-block"[routerLink]="['/tbposiciones/edit', tbposiciones.id_tablaP]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!---------------------------Grupo H------------------------------------->
+<div class="grupoH">
+    <h5>Grupo H</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">País</th>
+                    <th scope="col">GC</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">PT</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody *ngFor="let tb of tbposiciones[7]"><tr class="">
+                <th scope="row">{{tb.id_pais}}</th>
+                <td> {{tb.nombre_pais}} </td>
+                <td> {{tb.golesC_tablaP}} </td>
+                <td> {{tb.golesF_tablaP
+                }}</td>
+                <td> {{tb.partidosE_tablaP}} </td>
+                <td>{{tb.partidosG_tablaP
+                }}</td>
+                <td>{{tb.partidosJ_tablaP
+                }}</td>
+                <td>{{tb.partidosP_tablaP
+                }}</td>
+                <td>{{tb.partidosT_tablaP
+                }}</td>
+                <td><button
+                    class="btn btn-danger" (click)="eliminarTbposiciones(tbposiciones.id_tablaP)">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                    </button><a class="btn btn-info btn-block" [routerLink]="['/tbposiciones/edit', tbposiciones.id_tablaP]">Editar</a></td>
+              </tr></tbody>
+        </table>
+    </div>
+</div>

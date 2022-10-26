@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation-l',
@@ -12,4 +13,8 @@ export class NavigationLComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout(){
+    const token = localStorage.getItem('token');
+    localStorage.removeItem('token');
+  }
 }

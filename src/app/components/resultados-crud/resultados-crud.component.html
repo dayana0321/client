@@ -1,0 +1,266 @@
+<app-navigation-l></app-navigation-l>
+<!---------------------------Jornada 1------------------------------------->
+<div class="Jornada1">
+    <h5>Jornada 1</h5>
+    <div class="registrosJ1 table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody *ngFor="let resultado of resultados[0]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarResultados(resultado.id_resultados)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/resultados/edit', resultado.id_resultados]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!---------------------------Jornada 2------------------------------------->
+<div class="Jornada2">
+    <h5>Jornada 2</h5>
+    <div class="registrosJ2 table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody  *ngFor="let resultado of resultados[1]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarResultados(resultado.id_resultados)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/resultados/edit', resultado.id_resultados]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!---------------------------Jornada 3------------------------------------->
+<div class="Jornada3">
+    <h5>Jornada 3</h5>
+    <div class="registrosJ3 table-responsive">
+        <table class="table table-bordered align-middle">
+             <thead class="table-dark">
+                 <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+             </thead>
+            <tbody  *ngFor="let resultado of resultados[2]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarResultados(resultado.id_resultados)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/resultados/edit', resultado.id_resultados]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!---------------------------Jornada 4------------------------------------->
+<div class="Jornada4">
+    <h5>Octavos de Final</h5>
+    <div class="registrosJ4 table-responsive">
+        <table class="table table-bordered align-middle">
+             <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+             </thead>
+            <tbody  *ngFor="let resultado of resultados[3]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarResultados(resultado.id_resultados)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/resultados/edit', resultado.id_resultados]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!---------------------------Jornada 5------------------------------------->
+<div class="Jornada5">
+    <h5> Cuartos de Final</h5>
+    <div class="registrosJ5 table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody  *ngFor="let resultado of resultados[4]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarResultados(resultado.id_resultados)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/resultados/edit', resultado.id_resultados]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!---------------------------Jornada 6------------------------------------->
+<div class="Jornada6">
+    <h5>Semifinales</h5> 
+    <div class="registrosJ6 table-responsive">
+        <table class="table table-bordered align-middle">
+             <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+             </thead>
+            <tbody  *ngFor="let resultado of resultados[5]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarResultados(resultado.id_resultados)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/resultados/edit', resultado.id_resultados]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>   
+</div>
+<!---------------------------Jornada 7------------------------------------->
+<div class="Jornada7">
+    <h5>Tercer y Cuarto</h5>   
+    <div class="registrosJ7 table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-dark">
+                 <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+            </thead>
+            <tbody  *ngFor="let resultado of resultados[6]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarResultados(resultado.id_resultados)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/resultados/edit', resultado.id_resultados]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div> 
+</div>
+<!---------------------------Jornada 8------------------------------------->
+<div class="Jornada8">
+    <h5>Final</h5>    
+    <div class="registrosJ8 table-responsive">
+        <table class="table table-bordered align-middle">
+             <thead class="table-dark">
+                 <tr>
+                    <th scope="col">No.Partido</th>
+                    <th scope="col">País 1</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">País 2</th>
+                    <th scope="col">Goles</th>
+                    <th scope="col">Acciones</th>
+                 </tr>
+             </thead>
+            <tbody  *ngFor="let resultado of resultados[7]">
+                <tr class="">
+                    <th scope="row">{{resultado.id_calendario}}</th>
+                    <td> {{resultado.pais1}} </td>
+                    <td> {{resultado.golesp1_resultados
+                    }}</td>
+                    <td> {{resultado.pais2}} </td>
+                    <td>{{resultado.golesp2_resultados
+                    }}</td>
+                    <td><button
+                        class="btn btn-danger" (click)="eliminarResultados(resultado.id_resultados)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M16 1.75V3h5.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H8V1.75C8 .784 8.784 0 9.75 0h4.5C15.216 0 16 .784 16 1.75zm-6.5 0a.25.25 0 01.25-.25h4.5a.25.25 0 01.25.25V3h-5V1.75z"></path><path d="M4.997 6.178a.75.75 0 10-1.493.144L4.916 20.92a1.75 1.75 0 001.742 1.58h10.684a1.75 1.75 0 001.742-1.581l1.413-14.597a.75.75 0 00-1.494-.144l-1.412 14.596a.25.25 0 01-.249.226H6.658a.25.25 0 01-.249-.226L4.997 6.178z"></path><path d="M9.206 7.501a.75.75 0 01.793.705l.5 8.5A.75.75 0 119 16.794l-.5-8.5a.75.75 0 01.705-.793zm6.293.793A.75.75 0 1014 8.206l-.5 8.5a.75.75 0 001.498.088l.5-8.5z"></path></svg>
+                        </button><a class="btn btn-info btn-block" [routerLink]="['/resultados/edit', resultado.id_resultados]">Editar</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

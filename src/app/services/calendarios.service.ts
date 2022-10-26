@@ -33,7 +33,7 @@ export class CalendariosService {
   }
 
   getCalendario(id:string){
-    return this.http.get(`${this.API_URI}/calendario/${id}`, {headers: headers});
+    return this.http.get(`${this.API_URI}/calendario/fecha/${id}`, {headers: headers});
   }
 
   saveCalendarios(calendario:Object){

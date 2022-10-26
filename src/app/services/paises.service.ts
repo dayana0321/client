@@ -20,6 +20,7 @@ const header = new HttpHeaders({
 
 });
 
+console.log(header);
 //header.append('Authorization', localStorage.getItem('token'))
 
 //const requestOptions = { headers: headers };

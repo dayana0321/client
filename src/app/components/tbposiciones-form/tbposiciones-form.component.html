@@ -1,0 +1,85 @@
+<app-navigation-l></app-navigation-l>
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                 <!--Título de jornada-->
+                  <div class="form-group mb-4">
+                    <label for="pais">Pais</label>
+                    <input type="number" name="id_pais" [(ngModel)]="tbposiciones.id_pais" placeholder="Numero de Partido" id="pais" class="form-control" autofocus>
+                </div> 
+                <!--Título de paí 1s-->
+                <div class="form-group mb-4">
+                    <label for="puntosT">Puntos Totales</label>
+                    <input type="number" name="puntosT_tablaP" [(ngModel)]="tbposiciones.puntosT_tablaP" placeholder="Goles país 1" id="puntosT" class="form-control">
+                </div>
+
+                  <!--Título de paí 2-->
+                  <div class="form-group mb-4">
+                    <label for="PJ">Partidos Jugados</label>
+                    <input type="number" name="partidosJ_tablaP" [(ngModel)]="tbposiciones.partidosJ_tablaP" placeholder="Numero de PJ" class="form-control" id="PJ">
+                </div>
+                <div class="form-group mb-4">
+                    <label for="PG">Partidos Ganados</label>
+                    <input type="number" name="partidosG_tablaP" [(ngModel)]="tbposiciones.partidosG_tablaP" placeholder="Numero de PG" class="form-control" id="PG">
+                </div>
+                <div class="form-group mb-4">
+                    <label for="PE">Partidos Empatados</label>
+                    <input type="number" name="partidosE_tablaP" [(ngModel)]="tbposiciones.partidosE_tablaP" placeholder="Numero de PE" class="form-control" id="PE">
+                </div>
+                <div class="form-group mb-4">
+                    <label for="PP">Partidos Perdidos</label>
+                    <input type="number" name="partidosP_tablaP" [(ngModel)]="tbposiciones.partidosP_tablaP" placeholder="Numero de PP" class="form-control" id="PP">
+                </div>
+                  <div class="form-group mb-4">
+                    <label for="GF">Goles a Favor</label>
+                    <input type="number" name="golesF_tablaP" [(ngModel)]="tbposiciones.golesF_tablaP" placeholder="Goles a favor" class="form-control" id="GF">
+                </div>
+                   <div class="form-group mb-4">
+                    <label for="GC">Goles en Contra</label>
+                    <input type="number" name="golesC_tablaP" [(ngModel)]="tbposiciones.golesC_tablaP" placeholder="Goles en contra" class="form-control" id="GC">
+                </div>
+            
+                <button class="btn btn-danger btn-block" (click)="edit ? actualizarTbposicion(): SaveNewTbposicion()">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4  offset-md-6 mt-2">
+    <!-- <h5>{{calendario.id_jornada == 0 ? 'Jornada' : calendario.id_jornada}}</h5> -->
+    <table class="table table-bordered align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">PT</th>
+                <th scope="col">PJ</th>
+                <th scope="col">PG</th>
+                <th scope="col">PE</th>
+                <th scope="col">PP</th>
+                <th scope="col">GF</th>
+                <th scope="col">GC</th>
+              </tr>
+        </thead>
+        <tbody>
+            <th scope="row">{{tbposiciones.id_pais}}</th>
+            <td> {{tbposiciones.puntosT_tablaP == 0 ? 'Puntos Totales' : tbposiciones.puntosT_tablaP}} </td>
+            <td> {{tbposiciones.partidosJ_tablaP == 0 ? 'Partidos Jugados' : tbposiciones.partidosJ_tablaP}} </td>
+             <td> {{tbposiciones.partidosG_tablaP == 0 ? 'Partidos Ganados' : tbposiciones.partidosG_tablaP}} </td>
+             <td> {{tbposiciones.partidosE_tablaP == 0 ? 'Partidos Empatados' : tbposiciones.partidosE_tablaP}} </td>
+             <td> {{tbposiciones.partidosP_tablaP == 0 ? 'Partidos Perdidos' : tbposiciones.partidosP_tablaP}} </td>
+             <td> {{tbposiciones.golesF_tablaP == 0 ? 'Goles a Favor' : tbposiciones.golesF_tablaP}} </td>
+             <td> {{tbposiciones.golesC_tablaP == 0 ? 'Goles en contra' : tbposiciones.golesC_tablaP}} </td>
+        </tbody>
+    </table>
+    <!-- <div class="card card-body text-center">
+        <h5>{{paises.nombre_pais == '' ? 'Nombre del País' : paises.nombre_pais}}</h5>
+        <img [src]="paises.bandera_pais == '' ? '/assets/noimage.png' : paises.bandera_pais" class="card-img-top">
+        <p>{{paises.codigo_pais == '' ? 'Código de País' : paises.codigo_pais}}</p>
+        <p>{{paises.ranking_pais == 0 ? 'Ranking de País' : paises.ranking_pais}}</p>
+        <p>{{paises.copas_pais == 0 ? 'Copas de País' : paises.copas_pais}}</p>
+        <p>{{paises.id_grupo == 0 ? 'Nombre del grupo' : paises.id_grupo}}</p>
+        <p>{{paises.id_region == 0 ? 'Region del país' : paises.id_region}}</p>
+    </div> -->
+</div>
+

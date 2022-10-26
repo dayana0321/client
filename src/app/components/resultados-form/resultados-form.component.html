@@ -1,0 +1,54 @@
+<app-navigation-l></app-navigation-l>
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                 <!--Título de jornada-->
+                  <div class="form-group mb-4">
+                    <label for="partido">No.Partido</label>
+                    <input type="number" name="id_jornada" [(ngModel)]="resultados.id_calendario" placeholder="Numero de Partido" id="partido" class="form-control" autofocus>
+                </div> 
+                <!--Título de paí 1s-->
+                <div class="form-group mb-4">
+                    <label for="pais1">Goles Equipo 1</label>
+                    <input type="number" name="id_pais1" [(ngModel)]="resultados.golesp1_resultados" placeholder="Goles país 1" id="pais1" class="form-control">
+                </div>
+
+                  <!--Título de paí 2-->
+                  <div class="form-group mb-4">
+                    <label for="pais2">Goles Equipo 2</label>
+                    <input type="number" name="id_pais2" [(ngModel)]="resultados.golesp2_resultados" placeholder="Nombre del país 2" class="form-control" id="pais2">
+                </div>
+            
+                <button class="btn btn-danger btn-block" (click)="edit ? actualizarResultado(): saveNewResultado()">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4  offset-md-6 mt-2">
+    <!-- <h5>{{calendario.id_jornada == 0 ? 'Jornada' : calendario.id_jornada}}</h5> -->
+    <table class="table table-bordered align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Goles País 1</th>
+                <th scope="col">Goles País 2</th>
+              </tr>
+        </thead>
+        <tbody>
+            <th scope="row">{{resultados.id_calendario}}</th>
+            <td> {{resultados.golesp1_resultados == 0 ? 'Goles País 1' : resultados.golesp1_resultados}} </td>
+            <td> {{resultados.golesp2_resultados == 0 ? 'Goles País 2' : resultados.golesp2_resultados}} </td>
+        </tbody>
+    </table>
+    <!-- <div class="card card-body text-center">
+        <h5>{{paises.nombre_pais == '' ? 'Nombre del País' : paises.nombre_pais}}</h5>
+        <img [src]="paises.bandera_pais == '' ? '/assets/noimage.png' : paises.bandera_pais" class="card-img-top">
+        <p>{{paises.codigo_pais == '' ? 'Código de País' : paises.codigo_pais}}</p>
+        <p>{{paises.ranking_pais == 0 ? 'Ranking de País' : paises.ranking_pais}}</p>
+        <p>{{paises.copas_pais == 0 ? 'Copas de País' : paises.copas_pais}}</p>
+        <p>{{paises.id_grupo == 0 ? 'Nombre del grupo' : paises.id_grupo}}</p>
+        <p>{{paises.id_region == 0 ? 'Region del país' : paises.id_region}}</p>
+    </div> -->
+</div>
