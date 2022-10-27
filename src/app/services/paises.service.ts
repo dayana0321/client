@@ -30,6 +30,7 @@ console.log(header);
 })
 export class PaisesService {
   API_URI = 'http://localhost:3000/api/v1'
+  //API_URI = 'https://mundialapi.herokuapp.com/api/v1/'
 
   constructor(private http: HttpClient) { }
 
