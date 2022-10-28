@@ -1,7 +1,7 @@
 <app-navigation-l></app-navigation-l>
-<a routerLink="/paises/add">Agregar un nuevo país</a>
-<div class="col-md-4" *ngFor="let pais of paises">
-    <div class="card text-center d-flex p-2">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="col-md-4 container" *ngFor="let pais of paises">
+    <div class="card text-center d-flex p-2" style="width: 18rem;">
         <div class="card-header aling-items-center d-flex justify-content-between align-items-center">
             <h5 class="card-title">{{pais.id_pais}}. {{pais.nombre_pais}}</h5>
             <button
@@ -11,11 +11,12 @@
         </div>
         <img src="{{pais.bandera_pais}}" alt="">
         <div class="card-body">
-            <p class="card-text">Código: {{pais.codigo_pais}}</p>
-            <p class="card-text">Ranking: {{pais.ranking_pais}}</p>
-            <p class="card-text">Grupo: {{pais.nombre_grupo}}</p>
-            <p class="card-text">Region: {{pais.nombre_region}}</p>
+            <p class="card-text">Código: <span>{{pais.codigo_pais}}</span></p>
+            <p class="card-text">Ranking: <span>{{pais.ranking_pais}}</span></p>
+            <p class="card-text">Grupo: <span>{{pais.nombre_grupo}}</span></p>
+            <p class="card-text">Region:<span> {{pais.nombre_region}}</span></p>
             <a [routerLink]="['/paises/edit', pais.id_pais]" class="btn btn-info btn-block">Editar País</a>
         </div>
     </div>
+</div>
 </div>

@@ -1,5 +1,6 @@
 <app-navigation-l></app-navigation-l>
-<div class="col-md-4 offset-md-2">
+<div class="group">
+<div class="col-md-4 crud">
     <div class="card">
         <div class="card-body">
             <form>
@@ -36,7 +37,7 @@
     </div>
 </div>
 
-<div class="col-md-4  offset-md-6 mt-2">
+<div class="col-md-4 mt-2 container">
     <!-- <h5>{{calendario.id_jornada == 0 ? 'Jornada' : calendario.id_jornada}}</h5> -->
     <table class="table table-bordered align-middle">
         <thead class="table-dark">
@@ -44,6 +45,8 @@
                 <th scope="col">No.</th>
                 <th scope="col">Goles País 1</th>
                 <th scope="col">Goles País 2</th>
+                <th scope="col">País 1</th>
+                <th scope="col">País 2</th>
               </tr>
         </thead>
         <tbody>
@@ -63,4 +66,5 @@
         <p>{{paises.id_grupo == 0 ? 'Nombre del grupo' : paises.id_grupo}}</p>
         <p>{{paises.id_region == 0 ? 'Region del país' : paises.id_region}}</p>
     </div> -->
+</div>
 </div>

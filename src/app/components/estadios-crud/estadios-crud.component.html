@@ -1,6 +1,7 @@
 <app-navigation-l></app-navigation-l>
-<div class="col-md-4" *ngFor="let estadio of estadios">
-    <div class="card text-center d-flex p-2">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="col-md-4 container" *ngFor="let estadio of estadios">
+    <div class="card text-center d-flex p-2" style="width: 18rem;">
         <div class="card-header aling-items-center d-flex justify-content-between align-items-center">
             <h5 class="card-title">{{estadio.nombre_estadio}}</h5>
             <button
@@ -10,10 +11,11 @@
         </div>
         <img src="{{estadio.foto_estadio}}" alt="">
         <div class="card-body">
-            <p class="card-text">Capacidad: {{estadio.capacidad_estadio}}</p>
-            <p class="card-text">Ciudad: {{estadio.ciudad_estadio}}</p>
-            <p class="card-text">Descripcion: {{estadio.descripcion_estadio}}</p>
+            <p class="card-text">Capacidad: <span>{{estadio.capacidad_estadio}}</span></p>
+            <p class="card-text">Ciudad: <span>{{estadio.ciudad_estadio}}</span></p>
+            <p class="card-text">Descripcion: <span>{{estadio.descripcion_estadio}}</span></p>
             <a [routerLink]="['/estadios/edit', estadio.id_estadio]" class="btn btn-info btn-block">Editar Estadio</a>
         </div>
     </div>
+</div>
 </div>

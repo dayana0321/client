@@ -23,7 +23,7 @@ export class TokenComponent implements OnInit {
     .subscribe(
       res => {
         console.log(res);
-        alert('Tu token ha sido enviado a tu correo electrónico :)')
+        alert('Tu token ha sido enviado a tu correo electrónico')
       },
       err => console.error(err)
     )

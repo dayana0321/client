@@ -15,7 +15,7 @@ const headers = new HttpHeaders({
 const token = localStorage.getItem('token')
 
 const header = new HttpHeaders({
-  'Content-Type': 'application/json',
+  
   'Authorization': `${token}`
 
 });
