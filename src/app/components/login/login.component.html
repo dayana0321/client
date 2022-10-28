@@ -1,14 +1,17 @@
 <app-navigation></app-navigation>
-<div class="col-md-4 offset-md-4">
-    <div class="card">
-        <div class="card-body">
-            <form>
+<div class="modal-dialog text-center">
+    <div class="col-sm-8 main-section">
+        <div class="modal-content">
+            <div class="col-12 user-img">
+                <img src="/assets/login.png" alt="">
+            </div>
+            <form class="col-12">
                 <!--Usuario-->
-                <div class="form-group mb-4">
+                <div class="form-group mb-4" id="user-group">
                     <input type="text" name="nombre_usuario" placeholder="Ingrese su usuario" class="form-control" [(ngModel)]="usuarioL.nombre_usuario" autofocus>
                 </div>
                 <!--Contraseña-->
-                <div class="form-group mb-4">
+                <div class="form-group mb-4" id="contrasena-group">
                     <input type="password" name="pass_usuario" placeholder="Ingrese su contraseña" class="form-control" [(ngModel)] = "usuarioL.pass_usuario">
                 </div>
                 <button class="btn btn-danger" (click)="getUserL()">Ingresarr</button>

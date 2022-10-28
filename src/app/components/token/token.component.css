@@ -22,11 +22,11 @@ body {
     margin-right: auto;
     margin-left: auto;
     border: 12px solid transparent;
-    border-bottom-color: #28d;
+    border-bottom-color: #1b1b1b;
   }
   
   .login-header {
-    background: #28d;
+    background: #1b1b1b;
     padding: 20px;
     font-size: 1.4em;
     font-weight: normal;
@@ -71,17 +71,17 @@ body {
   }
   
   .login button {
-    background: #28d;
+    background: #e03a3c;
     border-color: transparent;
     color: #fff;
     cursor: pointer;
   }
   
   .login button:hover {
-    background: #17c;
+    background: #e03a3c;
   }
   
   /* Buttons' focus effect */
   .login button:focus {
-    border-color: #05a;
+    border-color: #e03a3c;
   }
