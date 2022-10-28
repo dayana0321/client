@@ -39,7 +39,7 @@ export class ResultadosService {
   }
 
   updateResultado(id:string, updatedPais:Object){
-    return this.http.put(`${this.API_URI}/resultados/${id}`, updatedPais, {headers:header} );
+    return this.http.patch(`${this.API_URI}/resultados/${id}`, updatedPais, {headers:header} );
   }
 }
 

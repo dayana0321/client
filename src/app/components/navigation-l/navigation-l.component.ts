@@ -14,7 +14,7 @@ export class NavigationLComponent implements OnInit {
   }
 
   logout(){
-    const token = localStorage.getItem('token');
+  //  const token = localStorage.getItem('token');
     localStorage.removeItem('token');
   }
 }

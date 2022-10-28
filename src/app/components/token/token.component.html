@@ -8,7 +8,7 @@
           <input type="text" name="nombre" placeholder="Nombre de Usuario" [(ngModel)]="usuario.nombre" required>
         </p>
         <p>
-          <input type="email" name="correo" placeholder="Email" [(ngModel)]="usuario.correo" required>
+          <input type="email" name="correo" placeholder="Email" [(ngModel)]="usuario.correo" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         </p>
         <p>
           <button class="btn btn-danger" (click)="getUsuario()">Solicitar</button>

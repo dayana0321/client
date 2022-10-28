@@ -4,20 +4,30 @@
         <div class="card-body">
             <form>
                  <!--Título de jornada-->
-                  <div class="form-group mb-4">
+                  <!-- <div class="form-group mb-4">
                     <label for="partido">No.Partido</label>
                     <input type="number" name="id_jornada" [(ngModel)]="resultados.id_calendario" placeholder="Numero de Partido" id="partido" class="form-control" autofocus>
-                </div> 
+                </div>  -->
                 <!--Título de paí 1s-->
                 <div class="form-group mb-4">
                     <label for="pais1">Goles Equipo 1</label>
-                    <input type="number" name="id_pais1" [(ngModel)]="resultados.golesp1_resultados" placeholder="Goles país 1" id="pais1" class="form-control">
+                    <input type="number" name="golesp1_resultados" [(ngModel)]="resultados.golesp1_resultados" placeholder="Goles país 1" id="pais1" class="form-control">
                 </div>
 
                   <!--Título de paí 2-->
-                  <div class="form-group mb-4">
+                <div class="form-group mb-4">
                     <label for="pais2">Goles Equipo 2</label>
-                    <input type="number" name="id_pais2" [(ngModel)]="resultados.golesp2_resultados" placeholder="Nombre del país 2" class="form-control" id="pais2">
+                    <input type="number" name="golesp2_resultados" [(ngModel)]="resultados.golesp2_resultados" placeholder="Nombre del país 2" class="form-control" id="pais2">
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="id_pais1">País1</label>
+                    <input type="number" name="id_pais1" [(ngModel)]="resultados.id_pais1" placeholder="Nombre del país 2" class="form-control" id="pais2">
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="id_pais2">Pais2</label>
+                    <input type="number" name="id_pais2" [(ngModel)]="resultados.id_pais2" placeholder="Nombre del país 2" class="form-control" id="pais2">
                 </div>
             
                 <button class="btn btn-danger btn-block" (click)="edit ? actualizarResultado(): saveNewResultado()">Guardar</button>
@@ -40,6 +50,8 @@
             <th scope="row">{{resultados.id_calendario}}</th>
             <td> {{resultados.golesp1_resultados == 0 ? 'Goles País 1' : resultados.golesp1_resultados}} </td>
             <td> {{resultados.golesp2_resultados == 0 ? 'Goles País 2' : resultados.golesp2_resultados}} </td>
+            <td> {{resultados.id_pais1 == 0 ? 'Pais1' : resultados.id_pais1}} </td>
+            <td> {{resultados.id_pais2 == 0 ? 'Pais2' : resultados.id_pais2}} </td>
         </tbody>
     </table>
     <!-- <div class="card card-body text-center">

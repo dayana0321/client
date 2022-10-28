@@ -10,9 +10,11 @@ import {Router, ActivatedRoute} from '@angular/router'
 export class ResultadosFormComponent implements OnInit {
 
   resultados:any ={
-    id_calendario: 0,
+    
     golesp1_resultados: 0,
-    golesp2_resultados: 0
+    golesp2_resultados: 0,
+    id_pais1:0,
+    id_pais2:0
   }
 
   edit: boolean = false;
@@ -57,11 +59,11 @@ export class ResultadosFormComponent implements OnInit {
   }
 
   actualizarResultado(){
-    this.resultadosService.updateResultado(this.resultados.id_resultados, this.resultados)
+    this.resultadosService.updateResultado(this.resultados.id_calendario, this.resultados)
     .subscribe(
       res =>{
         console.log(res)
-        console.log(this.resultados.id_resultados);
+        console.log(this.resultados.id_calendario);
         this.route.navigate(['/resultados/crud'])
       },
       err => console.log(err)
