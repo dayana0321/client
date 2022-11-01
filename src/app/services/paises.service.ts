@@ -10,20 +10,15 @@ const headers = new HttpHeaders({
   'Content-Type': 'application/json',
   'Authorization':
   `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhaW5hMiIsImlhdCI6MTY2NjQ1MjU3NiwiZXhwIjoxNjY5MDQ0NTc2fQ.FXouHuO4lsGC5YjrsgLxiktkZBdPLLwEvL7ROZmqLmg`
-
-});
-const token = localStorage.getItem('token')
-
-const header = new HttpHeaders({
-  
-  'Authorization': `${token}`
-
 });
 
-console.log(header);
-//header.append('Authorization', localStorage.getItem('token'))
+function adminHeader() {
+  const token = localStorage.getItem('token')
+  return new HttpHeaders({
+    'Authorization': `${token}`
+  });
+}
 
-//const requestOptions = { headers: headers };
 
 @Injectable({
   providedIn: 'root'
@@ -46,15 +41,16 @@ export class PaisesService {
     return this.http.get(`${this.API_URI}/paises/pais/${id}`, {headers: headers});
   }
 
+
   savePais(pais: Object){
-    return this.http.post(`${this.API_URI}/paises`, pais, {headers:header});
+    return this.http.post(`${this.API_URI}/paises`, pais, {headers:adminHeader()});
   }
 
   deletePais(id:string){
-    return this.http.delete(`${this.API_URI}/paises/${id}`, {headers: header});
+    return this.http.delete(`${this.API_URI}/paises/${id}`, {headers:adminHeader()});
   }
 
   updatePais(id:string, updatedPais:Object){
-    return this.http.put(`${this.API_URI}/paises/${id}`, updatedPais, {headers:header} );
+    return this.http.put(`${this.API_URI}/paises/${id}`, updatedPais, {headers:adminHeader()} );
   }
 }
